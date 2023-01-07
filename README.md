@@ -72,7 +72,8 @@ In the end, we should have the following folder structure:
 ## Demo
 
 This process has been implemented in Google collab -
-[![Collab for tts data maker](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1F2lxFNIHxvNcAhzSoxDl_W4nX5tnu6nr?usp=sharing)
+[![Collab for tts data maker](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1S_NIlJSH_wmKRui9v9N9CoP0LkKXLwh_)
+
 
 
 
