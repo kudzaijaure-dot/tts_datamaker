@@ -74,7 +74,6 @@ In the end, we should have the following folder structure:
 This process has been implemented in Google collab -
 [![Collab for tts data maker](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1F2lxFNIHxvNcAhzSoxDl_W4nX5tnu6nr?usp=sharing)
 
-- The dataset creation must be followed by creating a model using TTS. Details of the same can be found from this notebook -
-[![Collab for TTS](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1F8mdG6Vm7kAigyLZhc37_vTQBnh7wgk2?usp=sharing)
+
 
 
