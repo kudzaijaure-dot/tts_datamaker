@@ -3,18 +3,15 @@
 ![TTS Datamaker](https://user-images.githubusercontent.com/55686042/211143554-771ff02a-3f79-4008-8eb6-7553ebcd846f.png)
 
 
-### This repository offers a way to make personalized dataset for model creation using the famous TTS text to speech github repo.
+### This repository offers a way to make personalized dataset for model creation using the LJSpeech format.
 
-Link to TTS repository - https://github.com/coqui-ai/TTS
-
-Link to TTS in pypi - https://pypi.org/project/TTS/#description
 
 ## Steps to build your Dataset
 If you have want to use an audio file of your own skip step 2 . If you want to use audio from a wide range of speakers available from youtube step 2 is for you.
 
 ### 1. Clone the repository
 ```
-git clone https://github.com/souvikg544/TTS_Data_Maker.git
+git clone https://github.com/kudzaijaure-dot/tts_datamaker
 ```
 ```
 cd TTS_Data_Maker
@@ -22,45 +19,28 @@ pip install -r requirements.txt
 ```
 
 ### 2. Download a speech
-To download an audio from YouTube video cd into the TTS_Data_Maker directory and use audio_download.py
-Below is a sample command for downloading a GOT video :) .A mp4 file will be downloaded in the main_audio directory.
-It is required to give the video_link and speaker/video name as arguments to the below python file.
+To download an audio from YouTube, Google Drive or other online storage mediums, make use of one of these: 
+
 ```
-python audio_download.py --video_link https://www.youtube.com/watch?v=-B8IkMj6d1E --speaker_name got
+python audio_download.py --video_link https://www.youtube.com/watch?v=-B8Ikd1E --speaker_name got
+!cd main_audi && gdown https://link-to-donwload/token=xyz
 
 ```
 
 
 ### 3.Split the audio into small parts.
-To split the downloaded audio into smaller parts use the extract_segment.py file of the repository.
-
-```
-from extract_segment import SplitWavAudioMubin
-download_folder="main_audio"                      #folder in which audio file is stored
-video_filename="got.mp4"                          # Filename of the audio
-output_folder="/content/sample_tts_dataset/wavs"  #Output folder that will have segments of audio 
-duration=20                                       # Duration of each split in seconds
-
-spliter=SplitWavAudioMubin(download_folder,video_filename,output_folder)
-spliter.multiple_split(duration)
-
-```
+To split the downloaded audio into smaller parts use the extract_segment.py file of the repository. Only upload mp4 content.
 
 ### Audio to speech 
 
-For Audio to speech we will choose over many text to speech engine including those of Google and IBM. Run the below code snippet 
+For Audio to speech we will use Google's Speech-To-Text engine, which enables easy integration of Google speech recognition technologies into applications 
 to extract text from the audio snippets.
+For optimal results, the recognizer is designed to ignore background voices and noise without additional noise-canceling. However, for optimal results, position the microphone as close to the user as possible, particularly when background noise is present. Excessive background noise and echoes may reduce accuracy, especially if a lossy codec is also used.
+If you are capturing audio from more than one person, and each person is recorded on a separate channel, send each channel separately to get the best recognition results. However, if all speakers are mixed in a single channel recording, send the recording as is.	
+Multiple people talking at the same time, or at different volumes may be interpreted as background noise and ignored.
+For short queries or commands, use StreamingRecognize with single_utterance set to true. This optimizes the recognition for short utterances and also minimizes latency.
 
-```
-from extract_text import text_extraction
 
-path_to_audio_split="/content/sample_tts_dataset/wavs"  # As the name suggests use the same folder as output folder before
-output_folder="/content/sample_tts_dataset"             # Output folder having the text file
-output_file= "metadata.txt"                             # Name of the text file.
-
-et=text_extraction(path_to_audio_split)
-et.extract(output_folder,output_file)
-```
 
 
 ### Final Dataset
@@ -89,25 +69,12 @@ In the end, we should have the following folder structure:
   | -> audio2.wav
   | ...
 ```
-## Implementation
+## Demo
 
-- Implementing from github readmes is always a pain.
-To make things easier,the entire process has been implemented in Google collab -
+This process has been implemented in Google collab -
 [![Collab for tts data maker](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1F2lxFNIHxvNcAhzSoxDl_W4nX5tnu6nr?usp=sharing)
 
 - The dataset creation must be followed by creating a model using TTS. Details of the same can be found from this notebook -
 [![Collab for TTS](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1F8mdG6Vm7kAigyLZhc37_vTQBnh7wgk2?usp=sharing)
 
 
-
-
-
-## Note:
-*Please ignore if running on collab or cloud.*
-
-pydub module used extensively in this repository uses ffmpeg to process wav files. Hence if
-running on a local machine it requires ffmpeg to be downloaded and the bin folder must be added to path.
-
-Link - https://ffmpeg.org/download.html
-
-Download from *Get packages & executable files* section on the above link.
