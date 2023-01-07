@@ -1,6 +1,6 @@
 # Text To Speech Dataset Maker
 
-![data_maker](https://user-images.githubusercontent.com/63863911/192467194-ef6cce26-1ece-44be-9fff-5cd65b043280.png)
+![TTS Datamaker](https://user-images.githubusercontent.com/55686042/211143554-771ff02a-3f79-4008-8eb6-7553ebcd846f.png)
 
 
 ### This repository offers a way to make personalized dataset for model creation using the famous TTS text to speech github repo.
