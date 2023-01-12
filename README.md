@@ -69,12 +69,6 @@ In the end, we should have the following folder structure:
   | -> audio2.wav
   | ...
 ```
-## Demo
-
-This process has been implemented in Google collab -
-[![Collab for tts data maker](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1S_NIlJSH_wmKRui9v9N9CoP0LkKXLwh_)
-
-
 
 
 
