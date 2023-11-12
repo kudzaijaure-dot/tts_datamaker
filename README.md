@@ -1,10 +1,14 @@
-# Text To Speech Dataset Maker
+# Text To Speech Dataset Maker 👷‍♂️
 
 ![TTS Datamaker](https://user-images.githubusercontent.com/55686042/211143554-771ff02a-3f79-4008-8eb6-7553ebcd846f.png)
 
 
 ### This repository offers a way to make personalized dataset for model creation using the LJSpeech format.
-### Full code available for use now!😁: [🎶Remisal Audio 🎵](https://colab.research.google.com/github/kudzaijaure-dot/tts_datamaker/blob/main/RemisalAudio.ipynb)
+
+
+## Full code available for use now!😁: [🎶Remisal Audio 🎵](https://colab.research.google.com/github/kudzaijaure-dot/tts_datamaker/blob/main/RemisalAudio.ipynb)
+
+
 
 ## Steps to build your Dataset
 If you have want to use an audio file of your own skip step 2 . If you want to use audio from a wide range of speakers available from youtube step 2 is for you.
