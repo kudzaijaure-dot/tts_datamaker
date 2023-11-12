@@ -4,7 +4,7 @@
 
 
 ### This repository offers a way to make personalized dataset for model creation using the LJSpeech format.
-
+### Full code available for use now!😁: [🎶Remisal Audio 🎵](https://colab.research.google.com/github/kudzaijaure-dot/tts_datamaker/blob/main/RemisalAudio.ipynb)
 
 ## Steps to build your Dataset
 If you have want to use an audio file of your own skip step 2 . If you want to use audio from a wide range of speakers available from youtube step 2 is for you.
